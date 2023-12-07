@@ -1,0 +1,71 @@
+/* Background of the webpage */
+body {
+    background-color: #7FB278;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    align-items: center;
+    overflow: hidden;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header section */
+header {
+    background-color: #3A634B;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Container for the quote box */
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+}
+
+/* Box for the quote */
+.quote-box {
+    background-color: #3A634B;
+    color: #FFFFFF;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 23px;
+    width: 100%;
+}
+
+/* Container for the boxes in the grid section */
+.boxes-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 10px;
+    min-width: 100%;
+}
+
+/* Individual boxes in the grid section */
+.box {
+    background-color: #3A634B;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+}
+
+/* Style of h2 in the boxes */
+.box h2 {
+    text-decoration: underline;
+}
+
+/* Footer section */
+.footer {
+    background-color: #658961;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+}
