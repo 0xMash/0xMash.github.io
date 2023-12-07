@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="script.js"></script>
+
+    <title>Simple Accounts</title>
+</head>
+
+<!-- Body with the background colour grey -->
+
+<body class="bg-light">
+
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <a class="navbar-brand" href="#">Simple Accounts</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navigation links -->
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#pricing">Pricing</a>
+                </li>
+            </ul>
+            <a href="contact.html">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Contact Us</button>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Home section -->
+    <div class="container bg-light pt-5">
+        <div class="row">
+            <div class="col-sm">
+                <img src="image1.png" class="img-fluid" alt="Responsive image">
+            </div>
+            <div class="col-sm text-center mt-5">
+                <h1 class="mt-5 mb-3">Accounting made easy.</h1>
+                <p class="lead fw-normal text-muted mb-5">With Simple Accounts, you can leave all of your accounting
+                    worries with us! Focus on the important
+                    parts of the business and leave numbers to us.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services section -->
+    <section id="services" class="pt-5">
+        <div class="container bg-primary rounded text-center p-2 text-white shadow">
+            <div class="row">
+                <div class="col-sm">
+                    <h4 class="font-alt">Bookkeeping</h3>
+                        <p class="text-white-50">Keep your finances organsied effortlessly!</p>
+                </div>
+                <div class="col-sm">
+                    <h4 class="font-alt">Tax Filing</h3>
+                        <p class="text-white-50">Let experts handle your tax preparation!</p>
+                </div>
+                <div class="col-sm">
+                    <h4>Consulting</h3>
+                        <p class="text-white-50">Get personalised advice tailored to your needs!</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <h4>Payroll Management</h3>
+                        <p class="text-white-50">Smooth and easy payroll processing for you and your team!</p>
+                </div>
+                <div class="col-sm">
+                    <h4>Financial Reporting</h3>
+                        <p class="text-white-50">Understand your finances with clear and simple reports!</p>
+                </div>
+                <div class="col-sm">
+                    <h4>Invoicing</h3>
+                        <p class="text-white-50">Send professional invoices and get paid easily!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing section -->
+    <section id="pricing" class="pt-5">
+        <div class="container mt-4">
+            <!-- Form to build quote which has validation -->
+            <form class="needs-validation" onsubmit="event.preventDefault(); new Prices()" novalidate >
+                <h1 class="text-center"> Your Personalised Quote</h1>
+                <div class="row mt-3">
+                    <div class="col-sm">
+                        <label for="InputInvoices" class="form-label">Number of Monthly Invoices</label>
+                        <select class="form-control custom-select mb-2" aria-label="Default select example"
+                            id="InputInvoices" required>
+                            <option value="">Choose...</option>
+                            <option value="1">0-499</option>
+                            <option value="2">500-999</option>
+                            <option value="3">1000+</option>
+                        </select>
+                        <div class="mb-3">
+                            <label for="InputEmployees" class="form-label">Number of Employees</label>
+                            <select class="form-control custom-select" aria-label="Default select example"
+                                id="InputEmployees" required>
+                                <option value="">Choose...</option>
+                                <option value="1">0-49</option>
+                                <option value="2">50-999</option>
+                                <option value="3">1000+</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="form">
+                            <label for="InputRevenue" class="form-label">Annual Revenue</label>
+                            <select class="form-control custom-select mb-2" aria-label="Default select example"
+                                id="InputRevenue" required>
+                                <option value="">Choose...</option>
+                                <option value="1">0-499</option>
+                                <option value="2">500-999</option>
+                                <option value="3">1000+</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="InputBanks" class="form-label">Number of Bank Accounts</label>
+                            <select class="form-control custom-select" aria-label="Default select example"
+                                id="InputBanks" required>
+                                <option value="">Choose...</option>
+                                <option value="1">1-2</option>
+                                <option value="2">3-4</option>
+                                <option value="3">5+</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Buttons to generate the prices and reset the form -->
+                <div class="row justify-content-center mt-2">
+                    <button type="submit" class="btn btn-primary btn-lg mr-1">Submit</button>
+                    <button type="reset" value="reset" class="btn btn-secondary btn-lg ml-1">Restart</button>
+                </div>
+            </form>
+
+            <div class="row">
+                <div class="col">
+                    <!-- Feature item-->
+                    <div class="card shadow px-1 mt-5">
+                        <i class="bi-circle icon-feature text-gradient d-block mb-3 text-center"></i>
+                        <h3 class="font-alt card-title text-center" id="priceStarter">Starter - £30+</h3>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">&#x2714; Bookkeeping</li>
+                            <li class="list-group-item">&#x2714; Tax Filing</li>
+                            <li class="list-group-item">&#x2714; Invoicing</li>
+                            <li class="list-group-item">&#10060; Payroll Management</li>
+                            <li class="list-group-item">&#10060; Financial Reports</li>
+                            <li class="list-group-item">&#10060; Monthly 1 hour Consultation</li>
+                        </ul>
+
+                        <a type="button" class="btn btn-primary btn-lg mt-1 mb-1" href="contact.html">Get Started</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <!-- Feature item-->
+                    <div class="card shadow px-1 mt-5">
+                        <i class="bi-triangle icon-feature text-gradient d-block mb-3 text-center"></i>
+                        <h3 class="font-alt card-title text-center" id="priceBasic">Basic - £60+</h3>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">&#x2714; Bookkeeping</li>
+                            <li class="list-group-item">&#x2714; Tax Filing</li>
+                            <li class="list-group-item">&#x2714; Invoicing</li>
+                            <li class="list-group-item">&#x2714; Payroll Management</li>
+                            <li class="list-group-item">&#10060; Financial Reports</li>
+                            <li class="list-group-item">&#10060; Monthly 1 hour Consultation</li>
+                        </ul>
+                        <a type="button" class="btn btn-primary btn-lg mt-1 mb-1" href="contact.html">Get Started</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <!-- Feature item-->
+                    <div class="card shadow px-1 mt-5">
+                        <i class="bi-square icon-feature text-gradient d-block mb-3 text-center"></i>
+                        <h3 class="font-alt card-title text-center" id="pricePro">Pro - £90+</h3>
+                        <ul class="list-group list-group-flush list">
+                            <li class="list-group-item">&#x2714; Bookkeeping</li>
+                            <li class="list-group-item">&#x2714; Tax Filing</li>
+                            <li class="list-group-item">&#x2714; Invoicing</li>
+                            <li class="list-group-item">&#x2714; Payroll Management</li>
+                            <li class="list-group-item">&#x2714; Financial Reports</li>
+                            <li class="list-group-item">&#x2714; Monthly 1 hour Consultation</li>
+                        </ul>
+                        <a type="button" class="btn btn-primary btn-lg mt-1 mb-1" href="contact.html">Get Started</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-3 bg-primary text-white mt-5">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Services</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Contact</a></li>
+        </ul>
+        <p class="text-center text-body-secondary">&copy; Simple Accounts</p>
+    </footer>
+
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
